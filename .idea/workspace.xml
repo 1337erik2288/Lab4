@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a00c088-b40b-409c-a180-e8018d4c7101" name="Changes" comment="prikol">
-      <change afterPath="$PROJECT_DIR$/src/Places/Utilits/InterPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Places/Utilits/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Places/Utilits/Place.java" afterDir="false" />
-    </list>
+    <list default="true" id="0a00c088-b40b-409c-a180-e8018d4c7101" name="Changes" comment="prikol2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -76,7 +72,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670410372063</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="prikol2">
+      <created>1670556587253</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1670556587253</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -92,6 +95,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="prikol" />
-    <option name="LAST_COMMIT_MESSAGE" value="prikol" />
+    <MESSAGE value="prikol2" />
+    <option name="LAST_COMMIT_MESSAGE" value="prikol2" />
   </component>
 </project>
