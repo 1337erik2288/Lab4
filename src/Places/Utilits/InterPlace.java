@@ -7,23 +7,44 @@ import Places.Region;
 import java.util.Scanner;
 
 public class InterPlace {
+    private static Scanner scanner = new Scanner(System.in);
+
+    private static String nameInput(){
+        System.out.println("Имя места для взаимодействия: ");
+        return scanner.nextLine();
+    }
     public static void createObject(){
         Place obj = showOptions("Создать");
-        // Попроси имя и задай его сеттером, добавь в список выбранного класса
+        obj.setName(nameInput());
+        Place.places.add(obj);
     }
     public static void deleteObject(){
-        showOptions("Удалить");
-        // Попроси имя и удали из списка выбранного класса
-
+        boolean isDeleted = Place.places.removeIf(place -> place.getName().equals(nameInput()));
+        System.out.println(isDeleted ? "Успешно удалено" : "Место с таким именем не найдено");
     }
     public static void changeObject(){
         showOptions("Изменить");
-        // Попроси имя, найди в списке и измени его через сеттер
-
+        String givenName = nameInput();
+        for (Place place : Place.places){
+            if (place.getName().equals(givenName)){
+                System.out.println("Новое имя места: ");
+                place.setName(scanner.nextLine());
+                return;
+            }
+        }
+        System.out.println("Место с таким именем не найдено");
     }
     public static void callObject(){
         showOptions("Вызвать");
-        // Попроси имя, найди в списке и вызови его sayMyName
+        String givenName = nameInput();
+        for (Place place : Place.places){
+            if (place.getName().equals(givenName)){
+                place.myNameIs();
+                place.whatIAm();
+                return;
+            }
+        }
+        System.out.println("Место с таким именем не найдено");
     }
 
     private static Place showOptions(String manip){
