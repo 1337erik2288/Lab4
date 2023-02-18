@@ -35,7 +35,8 @@ public class InterPlace {
         System.out.println("Место с таким именем не найдено");
     }
     public static void callObject(){
-        showOptions("Вызвать");
+        showOptions(
+                "Вызвать");
         String givenName = nameInput();
         for (Place place : Place.places){
             if (place.getName().equals(givenName)){
