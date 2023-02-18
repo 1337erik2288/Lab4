@@ -16,16 +16,18 @@ public class InterPlace {
     public static void createObject(){
         Place obj = showOptions("Создать");
         obj.setName(nameInput());
-        Place.places.add(obj);
+        obj.getSet().add(obj);
     }
     public static void deleteObject(){
-        boolean isDeleted = Place.places.removeIf(place -> place.getName().equals(nameInput()));
+        // Я устал
+        Place obj = showOptions("Удалить");
+        boolean isDeleted = obj.getSet().removeIf(place -> place.getName().equals(nameInput()));
         System.out.println(isDeleted ? "Успешно удалено" : "Место с таким именем не найдено");
     }
     public static void changeObject(){
-        showOptions("Изменить");
+        Place obj = showOptions("Изменить");
         String givenName = nameInput();
-        for (Place place : Place.places){
+        for (Place place : obj.getSet()){
             if (place.getName().equals(givenName)){
                 System.out.println("Новое имя места: ");
                 place.setName(scanner.nextLine());
@@ -66,14 +68,17 @@ public class InterPlace {
             switch (choice) {
                 case "1" -> {
                     obj = new Region();
+                    obj.type = 1;
                     done = true;
                 }
                 case "2" -> {
                     obj = new City();
+                    obj.type = 2;
                     done = true;
                 }
                 case "3" -> {
                     obj = new Capital();
+                    obj.type = 3;
                     done = true;
                 }
 
