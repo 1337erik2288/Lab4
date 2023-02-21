@@ -10,7 +10,7 @@ public class InterPlace {
     private static Scanner scanner = new Scanner(System.in);
 
     private static String nameInput(){
-        System.out.println("Имя места для взаимодействия: ");
+        System.out.println(" Имя места для взаимодействия: ");
         return scanner.nextLine();
     }
     public static void createObject(){
