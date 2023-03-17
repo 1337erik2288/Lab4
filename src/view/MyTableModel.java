@@ -1,5 +1,7 @@
 package view;
 
+import Places.Capital;
+import Places.City;
 import Places.Utilits.Place;
 
 import javax.swing.table.AbstractTableModel;
@@ -18,26 +20,28 @@ public class MyTableModel extends AbstractTableModel {
 
     @Override
     public int getColumnCount() {
-        return 4;
+        return 2;
     }
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
         switch (columnIndex){
-            case 0: return place.getName(rowIndex).
+            case 0: return place.getPlace(rowIndex).getName()
             //data.getPerson(rowIndex).getFio()
             ;
             case 1: {
-                Person p = data.getPerson(rowIndex);
-                if (p instanceof Student){
-                    return ((Student) p).getGroup();
+                Place p = place.getPlace(rowIndex);
+                if (p instanceof City){
+                    return "Город";
+                }else if(p instanceof Capital){
+                    return "Столица";
                 }else{
-                    return ((Teacher) p).getSubject();
+                    return "Регион";
                 }
 
 
             }
         }
-        return "AAAAAAAAAAAA";
+        return null;
     }
 }

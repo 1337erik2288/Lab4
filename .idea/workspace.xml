@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a00c088-b40b-409c-a180-e8018d4c7101" name="Changes" comment="yes">
-      <change afterPath="$PROJECT_DIR$/src/view/MyTableModel.java" afterDir="false" />
+    <list default="true" id="0a00c088-b40b-409c-a180-e8018d4c7101" name="Changes" comment="Anton ne smotry, a to poluchish po jope">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Places/Utilits/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Places/Utilits/Place.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MyTableModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MyTableModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676990617028</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Anton ne smotry, a to poluchish po jope">
+      <created>1679018881514</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679018881514</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -126,6 +133,7 @@
     <MESSAGE value="prikol2" />
     <MESSAGE value="prikol3" />
     <MESSAGE value="yes" />
-    <option name="LAST_COMMIT_MESSAGE" value="yes" />
+    <MESSAGE value="Anton ne smotry, a to poluchish po jope" />
+    <option name="LAST_COMMIT_MESSAGE" value="Anton ne smotry, a to poluchish po jope" />
   </component>
 </project>

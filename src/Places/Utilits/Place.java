@@ -3,7 +3,7 @@ package Places.Utilits;
 import java.util.*;
 
 public abstract class Place {
-    public static Set<Place> places = new LinkedHashSet<>();
+    public static List<Place> places = new LinkedList<>();
     //интерфейсы
     protected String name;
     public String getName() {
@@ -19,9 +19,8 @@ public abstract class Place {
         return places.size();
     }
 
-    public Place getPlace(Integer Index){
-
-        return
+    public Place getPlace(int index){
+        return places.get(index);
     }
 
     public void myNameIs(){
