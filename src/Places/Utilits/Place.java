@@ -1,12 +1,9 @@
 package Places.Utilits;
 
-import java.util.HashSet;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public abstract class Place {
-    public static Set<Place> places = new HashSet<Place>();
+    public static Set<Place> places = new LinkedHashSet<>();
     //интерфейсы
     protected String name;
     public String getName() {
@@ -15,6 +12,16 @@ public abstract class Place {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getCount()
+    {
+        return places.size();
+    }
+
+    public Place getPlace(Integer Index){
+
+        return
     }
 
     public void myNameIs(){
