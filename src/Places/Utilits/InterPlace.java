@@ -64,15 +64,15 @@ public class InterPlace {
 
             switch (choice) {
                 case "1" -> {
-                    obj = new Region();
+                    //obj = new Region();
                     done = true;
                 }
                 case "2" -> {
-                    obj = new City();
+                    //obj = new City();
                     done = true;
                 }
                 case "3" -> {
-                    obj = new Capital();
+                    //obj = new Capital();
                     done = true;
                 }
 

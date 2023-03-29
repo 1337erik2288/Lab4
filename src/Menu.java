@@ -9,11 +9,11 @@ import java.util.Scanner;
 
 
 public class Menu {
-    private static Region region = new Region();
-    private static City city = new City();
-    private static Capital capital = new Capital();
+    //private static Region region = new Region();
+    //private static City city = new City();
+    //private static Capital capital = new Capital();
 
-    private static GroupPlaces groupPlaces = new GroupPlaces(region, city, capital);
+    //private static GroupPlaces groupPlaces = new GroupPlaces(region, city, capital);
 
     private static void sayMyNameOne(Place place){ place.whatIAm(); }
 
@@ -33,7 +33,7 @@ public class Menu {
 
             String choice = scan.nextLine();
             switch (choice) {
-                case "1" -> groupPlaces.showAll();
+                //case "1" -> groupPlaces.showAll();
                 case "2" -> secondMenu();
                 case "3" -> System.exit(0);
                 default -> System.out.println("Нет такого пункта меню");
