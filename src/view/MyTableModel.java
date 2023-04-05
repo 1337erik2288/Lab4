@@ -2,6 +2,7 @@ package view;
 
 import Places.Capital;
 import Places.City;
+import Places.Region;
 import Places.Utilits.Place;
 
 import javax.swing.table.AbstractTableModel;
@@ -59,11 +60,11 @@ public class MyTableModel extends AbstractTableModel {
             ;
             case 1: {
                 Place p = place.getPlace(rowIndex);
-                if (p instanceof City){
-                    return "Город";
-                }else if(p instanceof Capital){
+                if (p instanceof Capital){
                     return "Столица";
-                }else{
+                }else if(p instanceof City){
+                    return "Город";
+                }else {
                     return "Регион";
                 }
 

@@ -1,6 +1,5 @@
 package view;
 
-import Places.City;
 import Places.Utilits.Place;
 
 import javax.swing.*;
@@ -17,7 +16,7 @@ public class MainWindow extends JFrame{
 
     private MyTableModel myTableModel;
 
-    private JButton newCity;
+    private JButton newPlace;
 
     private JTextField jTextField;
 
@@ -35,6 +34,7 @@ public class MainWindow extends JFrame{
         });
         String places[] = {"City", "Region", "Capital"};
         jComboBox = new JComboBox<>(places);
+
         setLayout(new BorderLayout());
         jtable = new JTable();
         jtable.setModel(myTableModel);
@@ -45,21 +45,26 @@ public class MainWindow extends JFrame{
 
             }
         };
-        newCity = new JButton("Добавить новый город");
+        newPlace = new JButton("Добавить новое место");
         delitePlace = new JButton("Удалить");
         delitePlace.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
                     myTableModel.delite(jtable.getSelectedRow());
-                } catch (ArrayIndexOutOfBoundsException ex){
-                    JDialog jDialog = new JDialog(MainWindow.this, "Select place", true);
+                    jtable.repaint();//ArrayIndexOutOfBoundsException
+                } catch ( IndexOutOfBoundsException ex){
+                    JDialog jDialog = new JDialog(MainWindow.this, "Warning!!!", true);
+                    jDialog.setLocationRelativeTo(null);
+                    JLabel jLabel = new JLabel("Select place, please!");
+                    jDialog.add(jLabel);
+                    jDialog.pack();
                     jDialog.setVisible(true);
                 }
-                jtable.repaint();
+
             }
         });
-        newCity.addActionListener(new ActionListener() {
+        newPlace.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (jComboBox.getSelectedItem().toString() == "City"){
@@ -72,11 +77,17 @@ public class MainWindow extends JFrame{
                 jtable.repaint();
             }
         });
+        add(jTextField);
+        add(jComboBox);
+        JPanel jPanel = new JPanel();
+        jPanel.setLayout(new GridLayout(2, 1));
+        jPanel.add(jComboBox);
+        jPanel.add(jTextField);
+        add(jPanel, BorderLayout.WEST);
         add(jtable, BorderLayout.CENTER);
-        add(newCity, BorderLayout.NORTH);
+        add(newPlace, BorderLayout.NORTH);
         add(delitePlace, BorderLayout.SOUTH);
-        add(jComboBox, BorderLayout.WEST);
-        add(jTextField, BorderLayout.EAST);
+
 
 
         this.pack();
